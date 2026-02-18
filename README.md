@@ -1,33 +1,69 @@
-Description
-Ce projet est un jeu d'exploration en Java où le joueur navigue dans une grille de salles générée aléatoirement. Le joueur commence au centre avec 10 énergies et 10 grenades. L'objectif est d'atteindre l'une des quatre salles de sortie situées aux coins de la grille, en évitant les mines et en gérant les ressources (grenades pour ouvrir les portes, énergies pour utiliser les outils).
-Au lancement, une salle vide apparaît avec le joueur au centre. Deux commandes principales sont disponibles :
+# ⚡ Exploration – Jeu d’exploration en Java
 
-Avancer : Choisir une direction (haut, bas, gauche, droite) pour explorer. Les salles fermées nécessitent une grenade pour s'ouvrir (sauf pour revenir en arrière).
-Utiliser un outil : Activer le détecteur de mines (coût : 2 énergies) ou le scanner unidirectionnel (coût : 3 énergies).
+**Exploration** est un **jeu d’exploration textuel** développé en **Java**, où le joueur navigue dans une **grille de salles générée aléatoirement**, collecte des ressources et tente d’atteindre une sortie tout en évitant les dangers.  
 
-Dans les salles, le joueur peut trouver :
+📚 Projet pédagogique pour l’apprentissage de la **programmation orientée objet** en Java.  
 
-Mines : Mort immédiate (fin du jeu).
-Grenades : Ramasser un nombre limité (sans dépasser la limite initiale).
-Énergies : Ramasser un nombre limité (sans dépasser la limite initiale).
-Outils : Détecteur de mines (indique le nombre de mines autour) ou scanner unidirectionnel (compte les salles vides dans une direction, avec une marge d'erreur de 20%).
+---
 
-Le joueur gagne en atteignant une sortie. Il perd s'il touche une mine ou épuisé toutes ses grenades (impossible d'accéder à de nouvelles salles).
-Fonctionnalités supplémentaires :
+## 🧩 Présentation du projet
 
-Classe Bordure : Gère les limites du jeu, affiche "vous êtes arrivé à la limite" lors de l'interaction.
-Classe SalleVide : Représente les salles vides (50% des salles sont vides, 50% contiennent des objets comme outils, mines, etc.).
+Le joueur commence au **centre de la grille** avec :
 
-La grille est composée de 50% de salles vides et 50% de salles avec objets.
-Prérequis
+- 10 **énergies**  
+- 10 **grenades**  
 
-Java JDK 8 ou supérieur.
-Pas de dépendances externes (bibliothèques standard Java uniquement).
+### Objectif du jeu
 
-Comment Exécuter
+- Atteindre l’une des **quatre salles de sortie** situées aux coins de la grille  
+- Éviter les **mines**  
+- Gérer ses **ressources** (grenades pour ouvrir les portes, énergies pour utiliser les outils)  
 
-Clonez le dépôt (si applicable) ou compilez les fichiers Java.
-Compilez tous les fichiers .java avec javac *.java.
+### Commandes principales
+
+1. **Avancer** : Choisir une direction (`haut`, `bas`, `gauche`, `droite`) pour explorer.  
+   - Les salles fermées nécessitent une **grenade** pour s’ouvrir (sauf pour revenir en arrière).  
+2. **Utiliser un outil** :  
+   - **Détecteur de mines** : Coût 2 énergies, indique le nombre de mines autour.  
+   - **Scanner unidirectionnel** : Coût 3 énergies, compte approximativement le nombre de salles vides dans une direction (±20% erreur).
+
+### Types d’objets dans les salles
+
+- **Mines** : Mort immédiate, fin de partie.  
+- **Grenades** : Ramassage limité, ne peut pas dépasser la limite initiale.  
+- **Énergies** : Ramassage limité, ne peut pas dépasser la limite initiale.  
+- **Outils** :  
+  - Détecteur de mines  
+  - Scanner unidirectionnel  
+
+> Le joueur **gagne** en atteignant une sortie et **perd** s’il touche une mine ou n’a plus de grenades pour accéder aux salles.
+
+---
+
+## 🏗️ Fonctionnalités supplémentaires
+
+- **Classe `Bordure`** : Gère les limites de la grille, affiche un message si le joueur atteint une bordure.  
+- **Classe `SalleVide`** : Représente une salle vide (50% des salles sont vides, 50% contiennent des objets).  
+
+- La **grille** est composée de **50% salles vides** et **50% salles avec objets**.  
+
+---
+
+## ⚙️ Prérequis
+
+- **Java JDK 8** ou supérieur  
+- **Aucune dépendance externe** (Java standard uniquement)  
+
+---
+
+## ▶️ Exécution du jeu
+
+1. Clonez le dépôt ou copiez les sources.  
+2. Compilez tous les fichiers `.java` :
+
+```bash
+javac *.java
+
 Exécutez la classe principale : java Exploration.
 Suivez les instructions à l'écran pour jouer.
 
