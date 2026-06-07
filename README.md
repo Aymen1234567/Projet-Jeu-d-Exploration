@@ -1,5 +1,5 @@
 # ⚡ Exploration – Jeu d’exploration en Java
-
+### Projet académique (L1 informatique)
 **Exploration** est un **jeu d’exploration textuel** développé en **Java**, où le joueur navigue dans une **grille de salles générée aléatoirement**, collecte des ressources et tente d’atteindre une sortie tout en évitant les dangers.  
 
 📚 Projet pédagogique pour l’apprentissage de la **programmation orientée objet** en Java.  
